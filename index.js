@@ -21,11 +21,19 @@ function addToCart(item) {
 
 function viewCart() {
   let cartMessage = `In your cart, you have `;
-  for (let item in cart) {
-    cartMessage += ${}
+  
+  for (let i = 0; i < cart.length; i++) {
+    let itemMessage = `${cart[i].itemName} at \$${cart[i].itemPrice}`
+
+    if (cart.length === 1) {
+      cartMessage += `${itemMessage}.`
+    } else if (i === cart.length-1) {
+      cartMessage += `and ${itemMessage}.`
+    } else {
+      cartMessage += `${itemMessage}, `
+    }
   }
-  return cartMessage
-  // bananas at $17, pancake batter at $5, and eggs at $49.
+  return cartMessage;
 }
 
 function total() {
