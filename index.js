@@ -10,12 +10,11 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  cart = [ 
+  cart.push(
     {
-      itemName: item,
-      itemPrice: Math.round(Math.random() * (100 - 1) + 1)
-    }
-  ]
+      'itemName': item,
+      'itemPrice': Math.round(Math.random() * (100 - 1) + 1)
+    })
   return `${item} has been added to your cart.`
 }
 
