@@ -27,8 +27,8 @@ function viewCart() {
   } else {
     cartMessage += `In your cart, you have `;
   }
-  for (let i = 0; i < cart.length; i++) {
-    itemMessage = `${cart[i].itemName} at $${cart[i].itemPrice}`
+  cart.map((elem, i) => {
+    itemMessage = `${elem.itemName} at $${elem.itemPrice}`
     if (cart.length === 1) {
       cartMessage += `${itemMessage}.`
     } else if (i === cart.length-1) {
@@ -36,7 +36,7 @@ function viewCart() {
     } else {
       cartMessage += `${itemMessage}, `
     }
-  }
+  })
   return cartMessage;
 }
 
