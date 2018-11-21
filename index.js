@@ -22,7 +22,7 @@ function addToCart(item) {
 function viewCart() {
   let cartMessage = `In your cart, you have `;
   for (let item in cart) {
-    cartMessage += ${
+    cartMessage += ${}
   }
   return cartMessage
   // bananas at $17, pancake batter at $5, and eggs at $49.
