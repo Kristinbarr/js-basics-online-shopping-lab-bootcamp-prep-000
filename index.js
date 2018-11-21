@@ -10,11 +10,22 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  let cart = [ 
+    {
+      itemName: item,
+      itemPrice: Math.round(Math.random() * (100 - 1) + 1)
+    }
+  ]
+  return `${item} has been added to your cart.`
 }
 
 function viewCart() {
-  // write your code here
+  let cartMessage = `In your cart, you have `;
+  for (let item in cart) {
+    cartMessage += ${
+  }
+  return cartMessage
+  // bananas at $17, pancake batter at $5, and eggs at $49.
 }
 
 function total() {
