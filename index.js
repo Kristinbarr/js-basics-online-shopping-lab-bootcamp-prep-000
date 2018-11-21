@@ -19,15 +19,19 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  let cartMessage = `In your cart, you have `;
+  let cartMessage = '';
+  if (cart.length === 0) {
+    cartMessage += `Your shopping cart is empty.`
+  } else {
+    cartMessage += `In your cart, you have `;
+  }
   let itemMessage = ''
   for (let i = 0; i < cart.length; i++) {
     
     itemMessage = `${cart[i].itemName} at $${cart[i].itemPrice}`
     
-    if (cart.length === 0) {
-      cartMessage = `Your shopping cart is empty.`
-    } else if (cart.length === 1) {
+
+    if (cart.length === 1) {
       cartMessage += itemMessage
     } else if (i === cart.length-1) {
       cartMessage += `and ${itemMessage}.`
