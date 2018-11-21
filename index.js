@@ -23,10 +23,11 @@ function viewCart() {
   let cartMessage = `In your cart, you have `;
   
   for (let i = 0; i < cart.length; i++) {
+    
     let itemMessage = `${cart[i].itemName} at \$${cart[i].itemPrice}`
 
     if (cart.length === 1) {
-      cartMessage += `${itemMessage}.`
+      cartMessage += itemMessage
     } else if (i === cart.length-1) {
       cartMessage += `and ${itemMessage}.`
     } else {
