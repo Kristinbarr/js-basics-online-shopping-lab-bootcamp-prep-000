@@ -63,7 +63,7 @@ function placeOrder(cardNumber) {
     for (let i = 0; i < cart.length; i++) {
       
     }
-    
-  cart.splice(0,cart.length-1);
+    cart.splice(0,cart.length-1);
+    return `Your 
   }
 }
