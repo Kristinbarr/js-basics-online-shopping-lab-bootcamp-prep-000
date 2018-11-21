@@ -25,7 +25,7 @@ function viewCart() {
     
     itemMessage = `${cart[i].itemName} at $${cart[i].itemPrice}`
     
-    if (!cart.length) {
+    if (cart.length === 0) {
       cartMessage = `Your shopping cart is empty.`
     } else if (cart.length === 1) {
       cartMessage += itemMessage
