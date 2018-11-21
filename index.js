@@ -47,6 +47,9 @@ function total() {
 }
 
 function removeFromCart(item) {
+  // iterate through cartArr
+    // if cart[i].item is true,
+      // delete whole obj from arr
   if (cart.item) {
     
   }
