@@ -47,11 +47,12 @@ function total() {
 }
 
 function removeFromCart(item) {
-  cart.filter
-    if (cart[i].item) {
-      cart.splice(i,1)
+  cart.filter(el => {
+    if (!el.item) {
+      return `That item is not in your cart.`
     }
-  }
+  })
+  
 }
 
 function placeOrder(cardNumber) {
