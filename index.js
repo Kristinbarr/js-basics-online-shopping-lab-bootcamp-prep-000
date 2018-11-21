@@ -20,10 +20,10 @@ function addToCart(item) {
 
 function viewCart() {
   let cartMessage = `In your cart, you have `;
-  
+  let itemMessage = ''
   for (let i = 0; i < cart.length; i++) {
     
-    let itemMessage = `${cart[i].itemName} at \$${cart[i].itemPrice}`
+    itemMessage = `${cart[i].itemName} at $${cart[i].itemPrice}`
     
     if (!cart.length) {
       cartMessage = `Your shopping cart is empty.`
