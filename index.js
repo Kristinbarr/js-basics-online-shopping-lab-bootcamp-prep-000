@@ -10,7 +10,7 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  let cart = [ 
+  cart = [ 
     {
       itemName: item,
       itemPrice: Math.round(Math.random() * (100 - 1) + 1)
