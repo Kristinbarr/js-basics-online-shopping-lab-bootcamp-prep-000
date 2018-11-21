@@ -24,8 +24,10 @@ function viewCart() {
   for (let i = 0; i < cart.length; i++) {
     
     let itemMessage = `${cart[i].itemName} at \$${cart[i].itemPrice}`
-
-    if (cart.length === 1) {
+    
+    if (!cart.length) {
+      cartMessage = `Your shopping cart is empty.`
+    } else if (cart.length === 1) {
       cartMessage += itemMessage
     } else if (i === cart.length-1) {
       cartMessage += `and ${itemMessage}.`
