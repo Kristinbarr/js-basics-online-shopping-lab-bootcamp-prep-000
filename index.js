@@ -41,8 +41,8 @@ function viewCart() {
 }
 
 function total() {
-  return cart.reduce(acc, elem => {
-    return acc += elem['itemPrice'];
+  return cart.reduce((acc, elem) => {
+    return acc += elem.itemPrice;
   }, 0)
 }
 
